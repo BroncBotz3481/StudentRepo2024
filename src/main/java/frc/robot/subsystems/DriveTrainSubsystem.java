@@ -1,12 +1,22 @@
 package frc.robot.subsystems;
 
 
+import com.revrobotics.CANSparkMax;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class DriveTrainSubsystem extends SubsystemBase {
 
 
     private final static DriveTrainSubsystem INSTANCE = new DriveTrainSubsystem();
+    CANSparkMax frontLeftMotors;
+    CANSparkMax frontRightMotors;
+    CANSparkMax backLeftMotors;
+    CANSparkMax backRightMotors;
+
+    public Command telopCommand()
+
 
 
     /**
@@ -16,6 +26,7 @@ public class DriveTrainSubsystem extends SubsystemBase {
      */
 
     @SuppressWarnings("WeakerAccess")
+
     public static DriveTrainSubsystem getInstance() {
         return INSTANCE;
     }
